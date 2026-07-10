@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}Research Dashboard - OptiCrop{% endblock %}
+{% block content %}
+
+<div class="hero">
+  <h1>Agricultural Research &amp; Policy Dashboard</h1>
+  <p>Model performance, crop-environment relationships, and dataset statistics to support
+     evidence-based agricultural strategy and resource-optimization decisions.</p>
+</div>
+
+<div class="card">
+  <h2>Model Overview</h2>
+  <div class="stat-grid">
+    <div class="stat-box">
+      <div class="num">{{ metrics.best_model }}</div>
+      <div class="lbl">Best Model</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">{{ (metrics.classification_report['accuracy'] * 100) | round(2) }}%</div>
+      <div class="lbl">Test Accuracy</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">{{ crop_list | length }}</div>
+      <div class="lbl">Crops Modeled</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">{{ (metrics.classification_report['weighted avg']['f1-score'] * 100) | round(2) }}%</div>
+      <div class="lbl">Weighted F1 Score</div>
+    </div>
+  </div>
+
+  <h3>Model Comparison</h3>
+  <table>
+    <tr><th>Model</th><th>Accuracy</th><th>F1 (weighted)</th><th>5-fold CV Mean</th></tr>
+    {% for name, m in metrics.model_comparison.items() %}
+    <tr>
+      <td>{{ name }}</td>
+      <td>{{ (m.accuracy * 100) | round(2) }}%</td>
+      <td>{{ (m.f1_weighted * 100) | round(2) }}%</td>
+      <td>{{ (m.cv_mean * 100) | round(2) }}%</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+
+<div class="card">
+  <h2>Visual Analytics</h2>
+  <div class="img-grid">
+    <figure>
+      <img src="{{ url_for('static', filename='images/correlation_heatmap.png') }}" alt="Correlation Heatmap">
+      <figcaption>Feature Correlation Heatmap</figcaption>
+    </figure>
+    <figure>
+      <img src="{{ url_for('static', filename='images/feature_distributions.png') }}" alt="Feature Distributions">
+      <figcaption>Distribution of Environmental Parameters</figcaption>
+    </figure>
+    <figure>
+      <img src="{{ url_for('static', filename='images/crop_distribution.png') }}" alt="Crop Sample Distribution">
+      <figcaption>Samples per Crop</figcaption>
+    </figure>
+    {% if has_feature_importance %}
+    <figure>
+      <img src="{{ url_for('static', filename='images/feature_importance.png') }}" alt="Feature Importance">
+      <figcaption>Feature Importance</figcaption>
+    </figure>
+    {% endif %}
+    <figure>
+      <img src="{{ url_for('static', filename='images/confusion_matrix.png') }}" alt="Confusion Matrix">
+      <figcaption>Confusion Matrix (Best Model)</figcaption>
+    </figure>
+    <figure>
+      <img src="{{ url_for('static', filename='images/model_comparison.png') }}" alt="Model Comparison">
+      <figcaption>Model Comparison (5-fold CV)</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Crop-Environment Profiles</h2>
+  <p>Mean agronomic requirements learned from the dataset for each crop &mdash; useful for
+     regional planning and matching crops to district-level soil/climate survey data.</p>
+  <table>
+    <tr>
+      <th>Crop</th><th>N</th><th>P</th><th>K</th><th>Temp (&deg;C)</th>
+      <th>Humidity (%)</th><th>pH</th><th>Rainfall (mm)</th>
+    </tr>
+    {% for crop in crop_list %}
+    <tr>
+      <td style="text-transform:capitalize">{{ crop }}</td>
+      <td>{{ crop_stats[crop].N.mean }}</td>
+      <td>{{ crop_stats[crop].P.mean }}</td>
+      <td>{{ crop_stats[crop].K.mean }}</td>
+      <td>{{ crop_stats[crop].temperature.mean }}</td>
+      <td>{{ crop_stats[crop].humidity.mean }}</td>
+      <td>{{ crop_stats[crop].ph.mean }}</td>
+      <td>{{ crop_stats[crop].rainfall.mean }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+
+{% endblock %}

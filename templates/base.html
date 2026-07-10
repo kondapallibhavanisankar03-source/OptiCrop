@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}OptiCrop{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="{{ url_for('index') }}">🌱 OptiCrop</a>
+      <nav>
+        <a href="{{ url_for('index') }}">Recommend</a>
+        <a href="{{ url_for('suitability_form') }}">Suitability Check</a>
+        <a href="{{ url_for('dashboard') }}">Research Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>OptiCrop &mdash; Smart Agricultural Production Optimization Engine</p>
+  </footer>
+</body>
+</html>

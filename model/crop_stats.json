@@ -1,0 +1,662 @@
+{
+  "apple": {
+    "N": {
+      "mean": 21.49,
+      "std": 4.89
+    },
+    "P": {
+      "mean": 134.18,
+      "std": 13.0
+    },
+    "K": {
+      "mean": 194.09,
+      "std": 16.28
+    },
+    "temperature": {
+      "mean": 22.37,
+      "std": 2.53
+    },
+    "humidity": {
+      "mean": 92.05,
+      "std": 3.05
+    },
+    "ph": {
+      "mean": 5.95,
+      "std": 0.41
+    },
+    "rainfall": {
+      "mean": 110.37,
+      "std": 18.95
+    }
+  },
+  "banana": {
+    "N": {
+      "mean": 100.03,
+      "std": 14.94
+    },
+    "P": {
+      "mean": 82.32,
+      "std": 10.27
+    },
+    "K": {
+      "mean": 51.39,
+      "std": 10.16
+    },
+    "temperature": {
+      "mean": 26.81,
+      "std": 1.79
+    },
+    "humidity": {
+      "mean": 80.23,
+      "std": 3.59
+    },
+    "ph": {
+      "mean": 5.94,
+      "std": 0.39
+    },
+    "rainfall": {
+      "mean": 103.05,
+      "std": 18.97
+    }
+  },
+  "blackgram": {
+    "N": {
+      "mean": 40.07,
+      "std": 8.97
+    },
+    "P": {
+      "mean": 60.81,
+      "std": 9.93
+    },
+    "K": {
+      "mean": 19.69,
+      "std": 5.89
+    },
+    "temperature": {
+      "mean": 29.05,
+      "std": 2.48
+    },
+    "humidity": {
+      "mean": 63.98,
+      "std": 5.9
+    },
+    "ph": {
+      "mean": 7.12,
+      "std": 0.41
+    },
+    "rainfall": {
+      "mean": 67.05,
+      "std": 14.99
+    }
+  },
+  "chickpea": {
+    "N": {
+      "mean": 40.44,
+      "std": 7.44
+    },
+    "P": {
+      "mean": 59.53,
+      "std": 9.37
+    },
+    "K": {
+      "mean": 80.28,
+      "std": 10.8
+    },
+    "temperature": {
+      "mean": 18.83,
+      "std": 2.68
+    },
+    "humidity": {
+      "mean": 16.04,
+      "std": 3.83
+    },
+    "ph": {
+      "mean": 7.3,
+      "std": 0.38
+    },
+    "rainfall": {
+      "mean": 80.91,
+      "std": 14.18
+    }
+  },
+  "coconut": {
+    "N": {
+      "mean": 22.38,
+      "std": 6.03
+    },
+    "P": {
+      "mean": 16.26,
+      "std": 5.27
+    },
+    "K": {
+      "mean": 31.72,
+      "std": 7.43
+    },
+    "temperature": {
+      "mean": 26.75,
+      "std": 2.32
+    },
+    "humidity": {
+      "mean": 94.97,
+      "std": 1.91
+    },
+    "ph": {
+      "mean": 5.9,
+      "std": 0.42
+    },
+    "rainfall": {
+      "mean": 178.21,
+      "std": 25.91
+    }
+  },
+  "coffee": {
+    "N": {
+      "mean": 102.84,
+      "std": 15.19
+    },
+    "P": {
+      "mean": 27.02,
+      "std": 5.72
+    },
+    "K": {
+      "mean": 30.3,
+      "std": 7.84
+    },
+    "temperature": {
+      "mean": 24.87,
+      "std": 2.37
+    },
+    "humidity": {
+      "mean": 59.22,
+      "std": 8.37
+    },
+    "ph": {
+      "mean": 6.82,
+      "std": 0.4
+    },
+    "rainfall": {
+      "mean": 158.4,
+      "std": 25.41
+    }
+  },
+  "cotton": {
+    "N": {
+      "mean": 118.6,
+      "std": 14.27
+    },
+    "P": {
+      "mean": 46.23,
+      "std": 7.9
+    },
+    "K": {
+      "mean": 20.17,
+      "std": 6.42
+    },
+    "temperature": {
+      "mean": 23.76,
+      "std": 2.46
+    },
+    "humidity": {
+      "mean": 80.47,
+      "std": 5.12
+    },
+    "ph": {
+      "mean": 6.92,
+      "std": 0.41
+    },
+    "rainfall": {
+      "mean": 80.15,
+      "std": 13.42
+    }
+  },
+  "grapes": {
+    "N": {
+      "mean": 17.68,
+      "std": 5.27
+    },
+    "P": {
+      "mean": 130.21,
+      "std": 13.42
+    },
+    "K": {
+      "mean": 197.0,
+      "std": 13.5
+    },
+    "temperature": {
+      "mean": 23.74,
+      "std": 2.49
+    },
+    "humidity": {
+      "mean": 82.08,
+      "std": 3.86
+    },
+    "ph": {
+      "mean": 5.96,
+      "std": 0.45
+    },
+    "rainfall": {
+      "mean": 67.58,
+      "std": 11.67
+    }
+  },
+  "jute": {
+    "N": {
+      "mean": 78.96,
+      "std": 12.22
+    },
+    "P": {
+      "mean": 47.22,
+      "std": 6.96
+    },
+    "K": {
+      "mean": 39.99,
+      "std": 8.07
+    },
+    "temperature": {
+      "mean": 25.25,
+      "std": 1.93
+    },
+    "humidity": {
+      "mean": 80.37,
+      "std": 4.37
+    },
+    "ph": {
+      "mean": 6.68,
+      "std": 0.4
+    },
+    "rainfall": {
+      "mean": 177.49,
+      "std": 27.44
+    }
+  },
+  "kidneybeans": {
+    "N": {
+      "mean": 20.56,
+      "std": 6.16
+    },
+    "P": {
+      "mean": 61.12,
+      "std": 9.72
+    },
+    "K": {
+      "mean": 19.4,
+      "std": 5.45
+    },
+    "temperature": {
+      "mean": 18.01,
+      "std": 2.74
+    },
+    "humidity": {
+      "mean": 20.64,
+      "std": 4.05
+    },
+    "ph": {
+      "mean": 5.66,
+      "std": 0.41
+    },
+    "rainfall": {
+      "mean": 107.07,
+      "std": 20.81
+    }
+  },
+  "lentil": {
+    "N": {
+      "mean": 17.44,
+      "std": 5.54
+    },
+    "P": {
+      "mean": 67.5,
+      "std": 11.29
+    },
+    "K": {
+      "mean": 19.71,
+      "std": 5.02
+    },
+    "temperature": {
+      "mean": 23.75,
+      "std": 3.15
+    },
+    "humidity": {
+      "mean": 64.86,
+      "std": 6.62
+    },
+    "ph": {
+      "mean": 6.93,
+      "std": 0.39
+    },
+    "rainfall": {
+      "mean": 45.86,
+      "std": 13.07
+    }
+  },
+  "maize": {
+    "N": {
+      "mean": 83.07,
+      "std": 14.09
+    },
+    "P": {
+      "mean": 40.82,
+      "std": 10.05
+    },
+    "K": {
+      "mean": 20.96,
+      "std": 8.4
+    },
+    "temperature": {
+      "mean": 23.11,
+      "std": 2.88
+    },
+    "humidity": {
+      "mean": 63.46,
+      "std": 8.08
+    },
+    "ph": {
+      "mean": 6.27,
+      "std": 0.52
+    },
+    "rainfall": {
+      "mean": 91.05,
+      "std": 20.56
+    }
+  },
+  "mango": {
+    "N": {
+      "mean": 19.84,
+      "std": 5.85
+    },
+    "P": {
+      "mean": 26.89,
+      "std": 5.68
+    },
+    "K": {
+      "mean": 30.2,
+      "std": 8.13
+    },
+    "temperature": {
+      "mean": 31.01,
+      "std": 2.47
+    },
+    "humidity": {
+      "mean": 49.17,
+      "std": 7.62
+    },
+    "ph": {
+      "mean": 5.72,
+      "std": 0.37
+    },
+    "rainfall": {
+      "mean": 94.24,
+      "std": 18.43
+    }
+  },
+  "mothbeans": {
+    "N": {
+      "mean": 19.01,
+      "std": 6.12
+    },
+    "P": {
+      "mean": 47.07,
+      "std": 7.8
+    },
+    "K": {
+      "mean": 20.2,
+      "std": 5.51
+    },
+    "temperature": {
+      "mean": 28.01,
+      "std": 2.57
+    },
+    "humidity": {
+      "mean": 52.45,
+      "std": 7.86
+    },
+    "ph": {
+      "mean": 6.78,
+      "std": 0.49
+    },
+    "rainfall": {
+      "mean": 51.91,
+      "std": 16.2
+    }
+  },
+  "mungbean": {
+    "N": {
+      "mean": 20.12,
+      "std": 5.45
+    },
+    "P": {
+      "mean": 46.81,
+      "std": 8.1
+    },
+    "K": {
+      "mean": 19.31,
+      "std": 5.82
+    },
+    "temperature": {
+      "mean": 27.81,
+      "std": 1.87
+    },
+    "humidity": {
+      "mean": 85.3,
+      "std": 4.86
+    },
+    "ph": {
+      "mean": 6.66,
+      "std": 0.4
+    },
+    "rainfall": {
+      "mean": 46.21,
+      "std": 10.84
+    }
+  },
+  "muskmelon": {
+    "N": {
+      "mean": 98.68,
+      "std": 14.52
+    },
+    "P": {
+      "mean": 16.45,
+      "std": 5.39
+    },
+    "K": {
+      "mean": 51.27,
+      "std": 8.88
+    },
+    "temperature": {
+      "mean": 28.1,
+      "std": 1.89
+    },
+    "humidity": {
+      "mean": 91.98,
+      "std": 3.03
+    },
+    "ph": {
+      "mean": 6.4,
+      "std": 0.39
+    },
+    "rainfall": {
+      "mean": 23.46,
+      "std": 6.68
+    }
+  },
+  "orange": {
+    "N": {
+      "mean": 19.68,
+      "std": 4.96
+    },
+    "P": {
+      "mean": 16.22,
+      "std": 5.6
+    },
+    "K": {
+      "mean": 9.79,
+      "std": 4.11
+    },
+    "temperature": {
+      "mean": 22.39,
+      "std": 3.04
+    },
+    "humidity": {
+      "mean": 92.21,
+      "std": 3.15
+    },
+    "ph": {
+      "mean": 6.96,
+      "std": 0.42
+    },
+    "rainfall": {
+      "mean": 113.52,
+      "std": 19.04
+    }
+  },
+  "papaya": {
+    "N": {
+      "mean": 49.97,
+      "std": 10.12
+    },
+    "P": {
+      "mean": 58.64,
+      "std": 7.56
+    },
+    "K": {
+      "mean": 49.99,
+      "std": 10.84
+    },
+    "temperature": {
+      "mean": 33.06,
+      "std": 2.78
+    },
+    "humidity": {
+      "mean": 92.15,
+      "std": 2.62
+    },
+    "ph": {
+      "mean": 6.74,
+      "std": 0.4
+    },
+    "rainfall": {
+      "mean": 140.37,
+      "std": 24.67
+    }
+  },
+  "pigeonpeas": {
+    "N": {
+      "mean": 20.17,
+      "std": 6.48
+    },
+    "P": {
+      "mean": 60.49,
+      "std": 11.13
+    },
+    "K": {
+      "mean": 20.66,
+      "std": 5.65
+    },
+    "temperature": {
+      "mean": 26.08,
+      "std": 3.24
+    },
+    "humidity": {
+      "mean": 47.79,
+      "std": 7.59
+    },
+    "ph": {
+      "mean": 5.76,
+      "std": 0.54
+    },
+    "rainfall": {
+      "mean": 149.28,
+      "std": 24.96
+    }
+  },
+  "pomegranate": {
+    "N": {
+      "mean": 17.1,
+      "std": 5.45
+    },
+    "P": {
+      "mean": 18.79,
+      "std": 4.83
+    },
+    "K": {
+      "mean": 39.99,
+      "std": 7.66
+    },
+    "temperature": {
+      "mean": 21.45,
+      "std": 3.35
+    },
+    "humidity": {
+      "mean": 89.36,
+      "std": 3.73
+    },
+    "ph": {
+      "mean": 6.42,
+      "std": 0.47
+    },
+    "rainfall": {
+      "mean": 110.54,
+      "std": 21.14
+    }
+  },
+  "rice": {
+    "N": {
+      "mean": 78.81,
+      "std": 13.88
+    },
+    "P": {
+      "mean": 45.74,
+      "std": 10.12
+    },
+    "K": {
+      "mean": 40.1,
+      "std": 9.11
+    },
+    "temperature": {
+      "mean": 24.15,
+      "std": 2.67
+    },
+    "humidity": {
+      "mean": 81.33,
+      "std": 4.68
+    },
+    "ph": {
+      "mean": 6.4,
+      "std": 0.42
+    },
+    "rainfall": {
+      "mean": 221.23,
+      "std": 28.46
+    }
+  },
+  "watermelon": {
+    "N": {
+      "mean": 99.8,
+      "std": 14.22
+    },
+    "P": {
+      "mean": 16.84,
+      "std": 4.9
+    },
+    "K": {
+      "mean": 50.99,
+      "std": 10.19
+    },
+    "temperature": {
+      "mean": 24.84,
+      "std": 2.42
+    },
+    "humidity": {
+      "mean": 84.83,
+      "std": 4.0
+    },
+    "ph": {
+      "mean": 6.54,
+      "std": 0.42
+    },
+    "rainfall": {
+      "mean": 45.64,
+      "std": 13.02
+    }
+  }
+}

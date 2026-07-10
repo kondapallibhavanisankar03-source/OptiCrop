@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Suitability Result - OptiCrop{% endblock %}
+{% block content %}
+
+<h1>Suitability Report: <span style="text-transform:capitalize">{{ crop }}</span></h1>
+
+{% if verdict == "Highly Suitable" %}
+  <div class="verdict-banner verdict-good">✅ {{ verdict }} &mdash; Overall Score: {{ overall }}/100</div>
+{% elif verdict == "Moderately Suitable" %}
+  <div class="verdict-banner verdict-ok">⚠️ {{ verdict }} &mdash; Overall Score: {{ overall }}/100</div>
+{% else %}
+  <div class="verdict-banner verdict-bad">❌ {{ verdict }} &mdash; Overall Score: {{ overall }}/100</div>
+{% endif %}
+
+<div class="card">
+  <h2>Parameter-Level Assessment</h2>
+  <table>
+    <tr>
+      <th>Parameter</th>
+      <th>Your Value</th>
+      <th>Ideal Range (mean &plusmn; std)</th>
+      <th>Match Score</th>
+      <th>Status</th>
+    </tr>
+    {% for f, info in feature_scores.items() %}
+    <tr>
+      <td>{{ labels[f] }}</td>
+      <td>{{ info.value }}</td>
+      <td>{{ info.ideal_mean }} &plusmn; {{ info.ideal_std }}</td>
+      <td>{{ info.score }}%</td>
+      <td>
+        {% if info.status == "optimal" %}
+          <span class="badge badge-optimal">Optimal</span>
+        {% elif info.status == "acceptable" %}
+          <span class="badge badge-acceptable">Acceptable</span>
+        {% else %}
+          <span class="badge badge-unsuitable">Unsuitable</span>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+
+<div class="card">
+  <h2>Interpretation</h2>
+  <p>
+    The suitability score reflects how closely your soil and climate readings match the
+    typical growing conditions for <strong>{{ crop }}</strong>, based on historical
+    crop-environment data. Parameters marked <strong>Unsuitable</strong> are the biggest
+    drivers of a lower score &mdash; consider amending soil nutrients, irrigation, or
+    choosing a crop better matched to your current conditions.
+  </p>
+</div>
+
+<a class="btn btn-secondary" href="{{ url_for('suitability_form') }}">&larr; Check Another Crop</a>
+<a class="btn" href="{{ url_for('index') }}">Get a Full Crop Recommendation</a>
+
+{% endblock %}

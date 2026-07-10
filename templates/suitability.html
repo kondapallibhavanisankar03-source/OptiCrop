@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Suitability Check - OptiCrop{% endblock %}
+{% block content %}
+
+<div class="hero">
+  <h1>Crop Suitability &amp; Environmental Assessment</h1>
+  <p>Choose a crop and enter your current soil/climate readings. OptiCrop compares your
+     conditions against the ideal agronomic profile for that crop and reports a suitability
+     score with parameter-level feedback.</p>
+</div>
+
+<div class="card">
+  <form action="{{ url_for('suitability_check') }}" method="POST">
+    <div class="field" style="max-width:340px; margin-bottom:8px;">
+      <label for="crop">Crop to evaluate</label>
+      <select id="crop" name="crop" required>
+        {% for c in crops %}
+        <option value="{{ c }}">{{ c|capitalize }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="form-grid">
+      {% for f in features %}
+      <div class="field">
+        <label for="{{ f }}">{{ labels[f] }}</label>
+        <input type="number" step="0.01" id="{{ f }}" name="{{ f }}" required>
+      </div>
+      {% endfor %}
+    </div>
+    <button class="btn" type="submit">Assess Suitability</button>
+  </form>
+</div>
+
+{% endblock %}

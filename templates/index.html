@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}OptiCrop - Smart Crop Recommendation{% endblock %}
+{% block content %}
+
+<div class="hero">
+  <h1>Smart Crop Recommendation</h1>
+  <p>Enter your soil and environmental parameters below. OptiCrop analyzes Nitrogen, Phosphorous,
+     Potassium, temperature, humidity, pH, and rainfall to recommend the crop most likely to
+     maximize yield and resource efficiency on your land.</p>
+</div>
+
+<div class="card">
+  <h2>Field &amp; Soil Details</h2>
+  <form action="{{ url_for('predict') }}" method="POST">
+    <div class="form-grid">
+      <div class="field">
+        <label for="N">Nitrogen (N) &mdash; kg/ha</label>
+        <input type="number" step="0.01" id="N" name="N" placeholder="e.g. 90" min="0" max="150" required>
+      </div>
+      <div class="field">
+        <label for="P">Phosphorous (P) &mdash; kg/ha</label>
+        <input type="number" step="0.01" id="P" name="P" placeholder="e.g. 42" min="0" max="150" required>
+      </div>
+      <div class="field">
+        <label for="K">Potassium (K) &mdash; kg/ha</label>
+        <input type="number" step="0.01" id="K" name="K" placeholder="e.g. 43" min="0" max="210" required>
+      </div>
+      <div class="field">
+        <label for="temperature">Temperature &mdash; &deg;C</label>
+        <input type="number" step="0.01" id="temperature" name="temperature" placeholder="e.g. 24.5" min="0" max="50" required>
+      </div>
+      <div class="field">
+        <label for="humidity">Humidity &mdash; %</label>
+        <input type="number" step="0.01" id="humidity" name="humidity" placeholder="e.g. 80" min="0" max="100" required>
+      </div>
+      <div class="field">
+        <label for="ph">Soil pH</label>
+        <input type="number" step="0.01" id="ph" name="ph" placeholder="e.g. 6.5" min="0" max="14" required>
+      </div>
+      <div class="field">
+        <label for="rainfall">Rainfall &mdash; mm</label>
+        <input type="number" step="0.01" id="rainfall" name="rainfall" placeholder="e.g. 200" min="0" max="400" required>
+      </div>
+    </div>
+    <button class="btn" type="submit">Get Crop Recommendation</button>
+  </form>
+</div>
+
+<div class="card">
+  <h2>Not sure your field suits a specific crop?</h2>
+  <p>Use the <strong>Suitability Check</strong> tool to evaluate whether a particular crop
+     is compatible with your current soil and climate conditions.</p>
+  <a class="btn btn-secondary" href="{{ url_for('suitability_form') }}">Go to Suitability Check</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Recommendation Result - OptiCrop{% endblock %}
+{% block content %}
+
+<div class="result-hero">
+  <div>Recommended Crop</div>
+  <div class="crop-name">{{ best_crop }}</div>
+  <div class="conf">Model confidence: {{ best_conf }}%</div>
+</div>
+
+<div class="card">
+  <h2>Top Matching Crops</h2>
+  <ul class="rank-list">
+    {% for crop, conf in top_crops %}
+    <li>
+      <span style="text-transform:capitalize; min-width:120px;">{{ loop.index }}. {{ crop }}</span>
+      <div class="bar-bg"><div class="bar-fill" style="width:{{ conf }}%;"></div></div>
+      <span>{{ conf }}%</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="card">
+  <h2>Your Input Parameters</h2>
+  <table>
+    <tr><th>Parameter</th><th>Value</th></tr>
+    {% for f in values %}
+    <tr><td>{{ labels[f] }}</td><td>{{ values[f] }}</td></tr>
+    {% endfor %}
+  </table>
+</div>
+
+<a class="btn btn-secondary" href="{{ url_for('index') }}">&larr; Try Different Values</a>
+<a class="btn" href="{{ url_for('suitability_form') }}">Check Suitability for a Specific Crop</a>
+
+{% endblock %}
